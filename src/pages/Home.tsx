@@ -58,6 +58,7 @@ export const Home = () => {
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 2 }}
                                 className="w-full h-full object-cover absolute inset-0"
+                                onContextMenu={(e) => e.preventDefault()}
                             />
                         ) : (
                             // Default Fallback Image (Matching user's preference for "internet background")
@@ -68,6 +69,7 @@ export const Home = () => {
                                 animate={{ opacity: 0.6 }}
                                 className="w-full h-full object-cover absolute inset-0"
                                 alt="Default Hero"
+                                onContextMenu={(e) => e.preventDefault()}
                             />
                         )}
                     </AnimatePresence>
@@ -155,6 +157,7 @@ export const Home = () => {
                                                 src={service.imageUrl}
                                                 alt={service.title}
                                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                onContextMenu={(e) => e.preventDefault()}
                                             />
                                         ) : (
                                             <div className="w-full h-full bg-slate-200 flex items-center justify-center text-slate-400">No Image</div>

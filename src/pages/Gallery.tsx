@@ -79,6 +79,8 @@ const Gallery = () => {
                                                         loop
                                                         playsInline
                                                         controls
+                                                        controlsList="nodownload"
+                                                        onContextMenu={(e) => e.preventDefault()}
                                                     />
                                                     <div className="absolute inset-0 pointer-events-none bg-black/10 group-hover:bg-transparent transition-colors" />
                                                     <div className="absolute bottom-6 left-6">
@@ -105,6 +107,7 @@ const Gallery = () => {
                                                     alt={photo.title}
                                                     className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                                                     loading="lazy"
+                                                    onContextMenu={(e) => e.preventDefault()}
                                                 />
                                                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors pointer-events-none" />
                                                 <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -72,6 +72,7 @@ export const HomeGallery = () => {
                                         muted
                                         loop
                                         playsInline
+                                        onContextMenu={(e) => e.preventDefault()}
                                     />
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 group-hover:scale-110 transition-transform shadow-xl">
@@ -101,6 +102,7 @@ export const HomeGallery = () => {
                                         alt={item.title}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         loading="lazy"
+                                        onContextMenu={(e) => e.preventDefault()}
                                     />
                                     <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-white/90 via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
                                         <span className="text-slate-900 text-xs font-bold drop-shadow-sm">{item.title}</span>

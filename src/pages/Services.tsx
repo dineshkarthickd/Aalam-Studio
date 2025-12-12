@@ -52,7 +52,12 @@ export const Services = () => {
                                 >
                                     <div className="relative aspect-[3/4] rounded-2xl overflow-hidden glass-panel border border-white/20 shadow-lg transition-transform duration-500 hover:-translate-y-1">
                                         {service.imageUrl ? (
-                                            <img src={service.imageUrl} alt={service.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                            <img
+                                                src={service.imageUrl}
+                                                alt={service.title}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                onContextMenu={(e) => e.preventDefault()}
+                                            />
                                         ) : (
                                             <div className="w-full h-full flex items-center justify-center bg-slate-100 text-muted-foreground">No Image</div>
                                         )}
