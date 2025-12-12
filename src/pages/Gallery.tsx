@@ -79,7 +79,9 @@ const Gallery = () => {
                                                         loop
                                                         playsInline
                                                         controls
-                                                        controlsList="nodownload"
+                                                        controlsList="nodownload nofullscreen noremoteplayback"
+                                                        disablePictureInPicture
+                                                        draggable={false}
                                                         onContextMenu={(e) => e.preventDefault()}
                                                     />
                                                     <div className="absolute inset-0 pointer-events-none bg-black/10 group-hover:bg-transparent transition-colors" />
@@ -105,8 +107,10 @@ const Gallery = () => {
                                                 <img
                                                     src={photo.url}
                                                     alt={photo.title}
-                                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                                                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 select-none touch-none"
+                                                    style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
                                                     loading="lazy"
+                                                    draggable={false}
                                                     onContextMenu={(e) => e.preventDefault()}
                                                 />
                                                 <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors pointer-events-none" />

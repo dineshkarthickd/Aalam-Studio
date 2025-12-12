@@ -72,6 +72,9 @@ export const HomeGallery = () => {
                                         muted
                                         loop
                                         playsInline
+                                        controlsList="nodownload nofullscreen noremoteplayback"
+                                        disablePictureInPicture
+                                        draggable={false}
                                         onContextMenu={(e) => e.preventDefault()}
                                     />
                                     <div className="absolute inset-0 flex items-center justify-center">
@@ -100,8 +103,10 @@ export const HomeGallery = () => {
                                     <img
                                         src={item.url}
                                         alt={item.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 select-none touch-none"
+                                        style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
                                         loading="lazy"
+                                        draggable={false}
                                         onContextMenu={(e) => e.preventDefault()}
                                     />
                                     <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-white/90 via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
