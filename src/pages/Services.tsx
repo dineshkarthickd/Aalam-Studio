@@ -55,7 +55,9 @@ export const Services = () => {
                                             <img
                                                 src={service.imageUrl}
                                                 alt={service.title}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 select-none touch-none"
+                                                style={{ WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
+                                                draggable={false}
                                                 onContextMenu={(e) => e.preventDefault()}
                                             />
                                         ) : (
