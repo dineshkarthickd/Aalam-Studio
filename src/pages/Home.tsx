@@ -15,7 +15,7 @@ export const Home = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchData = async () => { 
             try {
                 const [heroes, serviceData] = await Promise.all([
                     getHomeHeroImages(),
