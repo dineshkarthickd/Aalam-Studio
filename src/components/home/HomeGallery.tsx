@@ -69,6 +69,7 @@ export const HomeGallery = () => {
                                     <video
                                         src={item.url}
                                         className="w-full h-full object-cover"
+                                        autoPlay
                                         muted
                                         loop
                                         playsInline
@@ -80,11 +81,6 @@ export const HomeGallery = () => {
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="w-12 h-12 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 group-hover:scale-110 transition-transform shadow-xl">
                                             <Play className="fill-white text-white w-4 h-4 ml-1" />
-                                        </div>
-                                    </div>
-                                    <div className="absolute bottom-4 left-4">
-                                        <div className="glass-panel bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-lg">
-                                            <h4 className="text-slate-900 text-sm font-bold">{item.title}</h4>
                                         </div>
                                     </div>
                                 </div>

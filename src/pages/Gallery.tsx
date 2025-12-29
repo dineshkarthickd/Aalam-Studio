@@ -85,11 +85,6 @@ const Gallery = () => {
                                                         onContextMenu={(e) => e.preventDefault()}
                                                     />
                                                     <div className="absolute inset-0 pointer-events-none bg-black/10 group-hover:bg-transparent transition-colors" />
-                                                    <div className="absolute bottom-6 left-6">
-                                                        <div className="glass-panel bg-white/80 backdrop-blur-md px-4 py-2 rounded-xl">
-                                                            <h3 className="text-slate-900 text-lg font-bold">{video.title}</h3>
-                                                        </div>
-                                                    </div>
                                                 </div>
                                             </div>
                                         ))}
